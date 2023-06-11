@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pedido de Namoro Irrecusável</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-image: url(IMAGENS/_MG_8157.JPG);
+      background-size: cover;
+      background-position: 5px 5px; /* posição horizontal, posição vertical */      ;
+      background-repeat: no-repeat;
+    }
+
+    h1 {
+      color: #ffffff;
+    }
+p {color: #ffffff;
+ font-size: 25px;
+  border-color: aqua;}
+    .button {
+      display: inline-block;
+      background-color: #ff4500;
+      color: rgb(252, 252, 252);
+      border: none;
+      padding: 15px 25px;
+      font-size: 25px;
+      cursor: pointer;
+    }
+
+    #accept-button {
+      margin-right: 10px;
+    }
+
+    #accept-button.disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    #love-message {
+      display: none;
+      font-size: 24px;
+      margin-top: 30px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>EU SOU APAIXONADO POR VOCÊ</h1>
+  <p>Eu te amo muito e não consigo imaginar minha vida sem você.</p>
+  <p>Você aceita transar comigo?</p>
+  <button id="accept-button" class="button">Sim, eu aceito!</button>
+  <button id="reject-button" class="button">Não</button>
+  
+  <p id="love-message">Eu te amo demais Hellenna! ❤️</p>
+
+  <script>
+    var acceptButton = document.getElementById('accept-button');
+    var rejectButton = document.getElementById('reject-button');
+    var loveMessage = document.getElementById('love-message');
+
+    acceptButton.addEventListener('click', function() {
+      acceptButton.style.display = 'none';
+      rejectButton.style.display = 'none';
+      loveMessage.style.display = 'block';
+    });
+
+    rejectButton.addEventListener('click', function(event) {
+      event.preventDefault();
+    });
+  </script>
+</body>
+</html>
